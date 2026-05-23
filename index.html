@@ -1,42 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Responsive Landing Page</title>
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillCraft Technology | Responsive Landing Page</title>
+    <!-- Google Fonts: Plus Jakarta Sans for premium modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav id="navbar">
-    <div class="logo">SkillCraft</div>
+    <!-- Interactive Fixed Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon"><i data-lucide="layers"></i></span>
+                <span class="logo-text">SkillCraft</span>
+            </a>
 
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+            <!-- Desktop Menu -->
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#hero" class="nav-link active" data-section="hero">Home</a>
+                <a href="#services" class="nav-link" data-section="services">Services</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
+                <a href="#testimonials" class="nav-link" data-section="testimonials">Testimonials</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+                <a href="#contact" class="nav-cta-mobile">Get Started</a>
+            </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Responsive Landing Page</h1>
-    <p>Create amazing web experiences</p>
-    <button>Get Started</button>
-  </section>
+            <!-- CTA Action Button -->
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary nav-cta">Get Started</a>
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="hamburger" id="hamburger-btn" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-  <!-- Extra Content for Scrolling -->
-  <section class="content">
-    <h2>About Our Website</h2>
-    <p>
-      This page demonstrates a responsive landing page with
-      an interactive fixed navigation menu.
-    </p>
-  </section>
+    <!-- Main Content Area -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="background-glows">
+                <div class="glow glow-1"></div>
+                <div class="glow glow-2"></div>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge">
+                        <span class="badge-dot"></span>
+                        <span class="badge-text">Next-Gen Digital Solutions</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Crafting Digital <br>
+                        <span class="gradient-text">Excellence</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        We build highly interactive, responsive, and stunning digital products that captivate users and accelerate growth. Elevate your online presence with SkillCraft Technology.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#portfolio" class="btn btn-primary btn-lg">Explore Work <i data-lucide="arrow-right"></i></a>
+                        <a href="#services" class="btn btn-secondary btn-lg">Our Services</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-num">99%</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                        </div>
+                        <div class="stat-border"></div>
+                        <div class="stat-item">
+                            <span class="stat-num">150+</span>
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
+                        <div class="stat-border"></div>
+                        <div class="stat-item">
+                            <span class="stat-num">5+ Years</span>
+                            <span class="stat-label">Industry Expertise</span>
+                        </div>
+                    </div>
+                </div>
 
-  <script src="script.js"></script>
+                <div class="hero-visual">
+                    <div class="interactive-card-wrapper">
+                        <div class="floating-card glass card-main">
+                            <div class="card-header">
+                                <div class="dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <span class="card-title">skillcraft_dashboard.js</span>
+                            </div>
+                            <div class="card-body">
+                                <pre><code><span class="keyword">const</span> <span class="variable">skillcraft</span> = <span class="keyword">new</span> <span class="class">Technology</span>({
+    <span class="property">design</span>: <span class="string">"Premium"</span>,
+    <span class="property">responsiveness</span>: <span class="string">"Fluid"</span>,
+    <span class="property">speed</span>: <span class="string">"Lightning Fast"</span>
+});
+
+<span class="variable">skillcraft</span>.<span class="method">launch</span>();
+<span class="comment">// Output: Success! 🚀</span></code></pre>
+                            </div>
+                        </div>
+                        <!-- Mini Overlay Cards for visual depth -->
+                        <div class="floating-card glass card-overlay-1">
+                            <div class="card-icon cyan"><i data-lucide="cpu"></i></div>
+                            <div class="card-info">
+                                <h4>Interactive Code</h4>
+                                <p>Custom UI Logic</p>
+                            </div>
+                        </div>
+                        <div class="floating-card glass card-overlay-2">
+                            <div class="card-icon purple"><i data-lucide="smartphone"></i></div>
+                            <div class="card-info">
+                                <h4>Responsive Layout</h4>
+                                <p>Optimized for Mobile</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#services" class="scroll-down" aria-label="Scroll to Services">
+                <span class="mouse">
+                    <span class="wheel"></span>
+                </span>
+            </a>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">What We Do</span>
+                    <h2 class="section-title">Our Expert Services</h2>
+                    <p class="section-subtitle">We design, develop, and deliver high-performance applications tailored to scale and perform flawlessly across all platforms.</p>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card glass">
+                        <div class="service-icon cyan">
+                            <i data-lucide="code"></i>
+                        </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-desc">Creating scalable, high-performance web applications using the latest modern stacks and technologies.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="chevron-right"></i></a>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="service-card glass">
+                        <div class="service-icon purple">
+                            <i data-lucide="palette"></i>
+                        </div>
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <p class="service-desc">Crafting beautiful, intuitive, and user-centric designs that prioritize user experience and fluid aesthetics.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="chevron-right"></i></a>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="service-card glass">
+                        <div class="service-icon pink">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                        <h3 class="service-title">Mobile Solutions</h3>
+                        <p class="service-desc">Developing cross-platform mobile apps that offer native performance and highly fluid interactive layouts.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="chevron-right"></i></a>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card glass">
+                        <div class="service-icon yellow">
+                            <i data-lucide="database"></i>
+                        </div>
+                        <h3 class="service-title">Cloud Infrastructure</h3>
+                        <p class="service-desc">Designing robust, secure, and auto-scaling cloud architectures built for speed and 99.9% uptime.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="chevron-right"></i></a>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card glass">
+                        <div class="service-icon green">
+                            <i data-lucide="trending-up"></i>
+                        </div>
+                        <h3 class="service-title">Digital Marketing</h3>
+                        <p class="service-desc">Strategic search engine optimization, content strategy, and conversion rate optimization campaigns.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="chevron-right"></i></a>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="service-card glass">
+                        <div class="service-icon red">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3 class="service-title">Cybersecurity</h3>
+                        <p class="service-desc">Advanced data encryption, penetration testing, and security audits to keep your enterprise apps safe.</p>
+                        <a href="#contact" class="service-link">Learn More <i data-lucide="chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-visual">
+                        <div class="grid-layout">
+                            <div class="grid-box box-1 glass"><i data-lucide="heart-handshake" class="about-icon"></i><h4>Trust First</h4></div>
+                            <div class="grid-box box-2 glass"><i data-lucide="zap" class="about-icon"></i><h4>Fast Execution</h4></div>
+                            <div class="grid-box box-3 glass"><i data-lucide="smile" class="about-icon"></i><h4>Happy Clients</h4></div>
+                            <div class="grid-box box-4 glass"><i data-lucide="award" class="about-icon"></i><h4>Award Winning</h4></div>
+                        </div>
+                    </div>
+                    <div class="about-content">
+                        <span class="section-tag">About Us</span>
+                        <h2 class="section-title">We are Passionate Creators Dedicated to Your Success</h2>
+                        <p class="section-desc">
+                            SkillCraft Technology was founded on the principle that digital experiences should be both visually inspiring and technically impeccable. We combine strategy, design, and engineering to build products that deliver meaningful business outcomes.
+                        </p>
+                        <ul class="about-list">
+                            <li><span class="list-bullet"><i data-lucide="check"></i></span> Modern Tech Architecture</li>
+                            <li><span class="list-bullet"><i data-lucide="check"></i></span> Interactive, Clean, and Semantic Code</li>
+                            <li><span class="list-bullet"><i data-lucide="check"></i></span> Optimized Performance and Speed</li>
+                            <li><span class="list-bullet"><i data-lucide="check"></i></span> Full Mobile & Tablet Responsiveness</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio/Work Section -->
+        <section id="portfolio" class="portfolio-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Our Portfolio</span>
+                    <h2 class="section-title">Selected Projects</h2>
+                    <p class="section-subtitle">Take a look at some of the interactive applications and premium websites we have crafted recently.</p>
+                </div>
+
+                <!-- Portfolio Filters -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All Work</button>
+                    <button class="filter-btn" data-filter="design">UI/UX Design</button>
+                    <button class="filter-btn" data-filter="dev">Development</button>
+                    <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+                </div>
+
+                <!-- Portfolio Gallery Grid -->
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <!-- Project 1 (Dev) -->
+                    <div class="portfolio-item glass" data-category="dev">
+                        <div class="portfolio-img-wrapper">
+                            <div class="placeholder-img dev-gradient">
+                                <i data-lucide="terminal" class="proj-icon"></i>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <a href="#" class="portfolio-zoom-btn" aria-label="View Project Details"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <span class="portfolio-cat">Development</span>
+                            <h3 class="portfolio-name">Fintech Dashboard</h3>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 (Design) -->
+                    <div class="portfolio-item glass" data-category="design">
+                        <div class="portfolio-img-wrapper">
+                            <div class="placeholder-img design-gradient">
+                                <i data-lucide="palette" class="proj-icon"></i>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <a href="#" class="portfolio-zoom-btn" aria-label="View Project Details"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <span class="portfolio-cat">UI/UX Design</span>
+                            <h3 class="portfolio-name">NFT Marketplace UI</h3>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 (Mobile) -->
+                    <div class="portfolio-item glass" data-category="mobile">
+                        <div class="portfolio-img-wrapper">
+                            <div class="placeholder-img mobile-gradient">
+                                <i data-lucide="smartphone" class="proj-icon"></i>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <a href="#" class="portfolio-zoom-btn" aria-label="View Project Details"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <span class="portfolio-cat">Mobile Apps</span>
+                            <h3 class="portfolio-name">E-Commerce Mobile App</h3>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 (Dev) -->
+                    <div class="portfolio-item glass" data-category="dev">
+                        <div class="portfolio-img-wrapper">
+                            <div class="placeholder-img dev2-gradient">
+                                <i data-lucide="layout" class="proj-icon"></i>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <a href="#" class="portfolio-zoom-btn" aria-label="View Project Details"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <span class="portfolio-cat">Development</span>
+                            <h3 class="portfolio-name">Saas Enterprise Portal</h3>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 (Design) -->
+                    <div class="portfolio-item glass" data-category="design">
+                        <div class="portfolio-img-wrapper">
+                            <div class="placeholder-img design2-gradient">
+                                <i data-lucide="paint-bucket" class="proj-icon"></i>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <a href="#" class="portfolio-zoom-btn" aria-label="View Project Details"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <span class="portfolio-cat">UI/UX Design</span>
+                            <h3 class="portfolio-name">Cryptocurrency Web Design</h3>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 (Mobile) -->
+                    <div class="portfolio-item glass" data-category="mobile">
+                        <div class="portfolio-img-wrapper">
+                            <div class="placeholder-img mobile2-gradient">
+                                <i data-lucide="iphone" class="proj-icon"></i>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <a href="#" class="portfolio-zoom-btn" aria-label="View Project Details"><i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <span class="portfolio-cat">Mobile Apps</span>
+                            <h3 class="portfolio-name">Health & Fitness App</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Testimonials</span>
+                    <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-subtitle">Real feedback from clients who partner with us for web development and responsive layout designs.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card glass">
+                        <div class="quote-icon"><i data-lucide="quote"></i></div>
+                        <p class="testimonial-text">
+                            "SkillCraft Technology turned our outdated application into a responsive masterpiece. The design looks premium, the transitions are incredibly smooth, and the mobile performance exceeded our expectations!"
+                        </p>
+                        <div class="client-info">
+                            <div class="client-avatar border-cyan">
+                                <span>SM</span>
+                            </div>
+                            <div class="client-meta">
+                                <h4 class="client-name">Sarah Mitchell</h4>
+                                <span class="client-role">Product Director, Fintech Hub</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card glass">
+                        <div class="quote-icon"><i data-lucide="quote"></i></div>
+                        <p class="testimonial-text">
+                            "The interactive navigation and attention to UX detail are top-notch. Our users love the navigation menu styling and the speed of our new landing page. Highly recommend them for modern web design projects."
+                        </p>
+                        <div class="client-info">
+                            <div class="client-avatar border-purple">
+                                <span>JH</span>
+                            </div>
+                            <div class="client-meta">
+                                <h4 class="client-name">James Harrison</h4>
+                                <span class="client-role">Founder & CEO, WebFlow Agency</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card glass">
+                        <div class="quote-icon"><i data-lucide="quote"></i></div>
+                        <p class="testimonial-text">
+                            "Fantastic communication, state-of-the-art visuals, and clean semantic code. The website builds smoothly and adapts perfectly to tablets, phones, and ultra-wide screens. A stellar agency!"
+                        </p>
+                        <div class="client-info">
+                            <div class="client-avatar border-pink">
+                                <span>EC</span>
+                            </div>
+                            <div class="client-meta">
+                                <h4 class="client-name">Elena Rostova</h4>
+                                <span class="client-role">Marketing Manager, Cryptotech Ltd</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Contact Section -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="section-tag">Get In Touch</span>
+                        <h2 class="section-title">Ready to Craft Your Digital Experience?</h2>
+                        <p class="section-desc">Have a project in mind or want to collaborate? Fill out the form and our design and development experts will get back to you within 24 hours.</p>
+                        
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <span class="detail-icon"><i data-lucide="mail"></i></span>
+                                <div class="detail-content">
+                                    <h5>Email Us</h5>
+                                    <p>hello@skillcrafttech.com</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon"><i data-lucide="phone"></i></span>
+                                <div class="detail-content">
+                                    <h5>Call Us</h5>
+                                    <p>+1 (555) 019-2834</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon"><i data-lucide="map-pin"></i></span>
+                                <div class="detail-content">
+                                    <h5>Visit Office</h5>
+                                    <p>100 Innovation Way, Suite 400, Tech City</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container glass">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Your Name</label>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">Your Email</label>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" required placeholder=" ">
+                                <label for="subject">Subject</label>
+                                <span class="form-line"></span>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" required placeholder=" " rows="4"></textarea>
+                                <label for="message">Project Details</label>
+                                <span class="form-line"></span>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                                Send Message <i data-lucide="send"></i>
+                            </button>
+                            <div id="form-success" class="form-success-msg hidden">
+                                <i data-lucide="check-circle"></i> Message sent successfully! We'll reply soon.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#hero" class="nav-logo">
+                    <span class="logo-icon"><i data-lucide="layers"></i></span>
+                    <span class="logo-text">SkillCraft</span>
+                </a>
+                <p class="footer-desc">Building premium, responsive, and highly-interactive digital applications that make an impact.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="#" aria-label="Dribbble"><i data-lucide="dribbble"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Web Development</a></li>
+                    <li><a href="#services">UI/UX Design</a></li>
+                    <li><a href="#services">Mobile Solutions</a></li>
+                    <li><a href="#services">Cloud Infrastructure</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#portfolio">Our Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4>Subscribe</h4>
+                <p>Stay updated with our latest design trends and tech insights.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required aria-label="Newsletter email">
+                    <button type="submit" aria-label="Subscribe button"><i data-lucide="arrow-right"></i></button>
+                </form>
+                <div id="newsletter-success" class="newsletter-success-msg hidden">
+                    Thanks for subscribing! 🚀
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 SkillCraft Technology. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Script -->
+    <script src="script.js"></script>
 </body>
 </html>
